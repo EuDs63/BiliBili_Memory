@@ -70,9 +70,9 @@ def get_all_comments(uid, page_size=100):
     return all_comments
 
 
-def main(uid):
+def main(user_id):
     """ 主程序，控制数据获取并按100条数据存储为不同文件 """
-    all_comments = get_all_comments(uid)
+    all_comments = get_all_comments(user_id)
 
     if not all_comments:
         logging.warning("没有获取到任何评论数据")
@@ -82,7 +82,7 @@ def main(uid):
     for i in range(0, total_comments, 100):
         # 获取当前100条评论
         comments_chunk = all_comments[i:i + 100]
-        filename = f"{uid}_{i + 1}-{min(i + 100, total_comments)}.json"
+        filename = f"{user_id}_{i + 1}-{min(i + 100, total_comments)}.json"
         save_comments_to_file({"replies": comments_chunk}, filename)
 
     logging.info(f"所有评论数据已保存，共保存了 {total_comments} 条评论。")
