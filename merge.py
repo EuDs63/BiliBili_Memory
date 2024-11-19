@@ -36,5 +36,5 @@ def main(user_id):
 # 示例用法
 if __name__ == "__main__":
     #  获取output文件夹下的所有以json文件
-    uid = "502474657"  # 示例 UID
+    uid = "7"  # 示例 UID
     main(uid)

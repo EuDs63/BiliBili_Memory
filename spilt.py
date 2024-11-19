@@ -34,5 +34,5 @@ def split_data_by_year(user_id):
 
 
 if __name__ == "__main__":
-    uid = "502474657"  # 示例 UID
+    uid = "7"  # 示例 UID
     split_data_by_year(uid)

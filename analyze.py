@@ -1,14 +1,8 @@
 # 对posts.josn文件进行分析
-import asyncio
 import json
 import jieba
-import numpy as np
-from wordcloud import WordCloud, ImageColorGenerator
+from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from PIL import Image  # 处理图片
-import datetime
-from concurrent.futures import ProcessPoolExecutor
-
 
 # 根据data生成词云
 def generate_word_cloud_by_data(data):
@@ -164,7 +158,7 @@ def generate_post_all_data(user_id):
 
 
 if __name__ == "__main__":
-    user_id = "502474657"
+    user_id = "7"
     # 为每年的数据生成词云图
     generate_word_cloud_every_year(user_id)
     # 为每年的数据生成饼状图

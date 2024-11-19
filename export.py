@@ -90,5 +90,5 @@ def main(user_id):
 
 # Example usage
 if __name__ == "__main__":
-    uid = 502474657  # 示例 UID
+    uid = 7  # 示例 UID
     main(uid)
